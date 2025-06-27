@@ -98,18 +98,11 @@ br.com.prover.phrasejsf
 ├── adapter
 │   ├── web
 │   │   └── PhraseBean.java
-│   └── repository
-│       ├── PhraseRepositoryImpl.java
-│       └── PhraseEntity.java
 |
 ├── port
 │   ├── input
 │   │   └── AnalyzePhraseInputPort.java
-│   └── output
-│       └── PhraseRepository.java
-|
-└── application.config
-    └── persistence.xml (em META-INF)
+│   
 ```
 
 ## Features
