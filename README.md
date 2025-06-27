@@ -8,8 +8,6 @@ Aplicacao desenvolvida com JSF 2.2, PrimeFaces 6.2, CDI, JPA (Hibernate) e arqui
 * JSF 2.2
 * PrimeFaces 6.2
 * CDI 1.2
-* JPA (Hibernate)
-* MySQL 5.7
 * WildFly 10.1
 * Docker & Docker Compose
 * Lombok
