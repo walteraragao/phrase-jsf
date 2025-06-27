@@ -111,7 +111,6 @@ br.com.prover.phrasejsf
 
     * Quantidade de palavras distintas
     * Contagem de ocorrências
-* Salvamento da frase e resultado no banco
 * Integração com JSF + PrimeFaces
 
 ---
