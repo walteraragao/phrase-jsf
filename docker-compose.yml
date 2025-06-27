@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: mysql-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: phraseapp
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: phrase
+      MYSQL_PASSWORD: phrase
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  wildfly:
+    build: .
+    container_name: wildfly10
+    ports:
+      - "8080:8080"
+      - "9990:9990"
+      - "8787:8787"
+    environment:
+      JAVA_OPTS: >
+        -Djava.net.preferIPv4Stack=true
+        -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+    command: >
+      /opt/jboss/wildfly/bin/standalone.sh
+      -b=0.0.0.0
+      -bmanagement=0.0.0.0
+
+volumes:
+  mysql_data:
